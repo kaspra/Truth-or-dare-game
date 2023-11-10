@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Or Dare</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <div class="title">
+            <h4>Truth Or Dare</h4>
+        </div>
+        <div class="mylink">
+            <p>By <a href="https://www.instagram.com/praveen.iq/" target="_blank">praveen.iq</a></p>
+        </div>
+    </nav>
+
+
+
+    <section class="main-container">
+        <form action="" class="game-form">
+            <div class="form-control">
+                <input type="text" class="enter-name" id="name-input" placeholder="Enter Player Name">
+                <button type="submit" class="submit-btn" onClick="window.location.reload();"><i class="fa fa-solid fa-plus" style="color: #58eb02;"></i></button>
+            </div>
+        </form>
+        <div class="list-cont">
+            <div class="name-list">
+                <!-- <p class="name">1. Harish</p>
+                <button class="delete-btn"><i class="fa fa-solid fa-trash" style="color: #58eb02;"></i></button> -->
+                <button class="start-btn"><a>Start</a></button>
+                <button class="clear-btn">Clear</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="main">
+        <div class="info">
+            <div class="player">
+                <h4 class="player-name" id="player">Player</h4>
+            </div>
+            <a href="" class="exit-btn"><img src="cross.png" alt="EXIT"></a>
+        </div>
+        <div class="show-cont">
+            <div class="shadow" id="taskArea">
+                Click Truth or Dare
+            </div>
+        </div>
+        <div id="navigation">
+            <button onclick="getNewTask('truth')" id="truth" class="btn">Truth</button>
+            <button onclick="getNewTask('dare')" id="dare" class="btn">Dare</button>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceworker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+        }
+    </script>
+</body>
+</html>
